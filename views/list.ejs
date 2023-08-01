@@ -1,0 +1,42 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+    <link rel="stylesheet" href="../styles.css">
+
+    <div class="box" id="heading">
+
+        <h1> <%= khiladi %> </h1>
+    </div>
+    <!-- part of the today date section-->
+
+
+    <div class="box">
+
+
+        <!--  <li><%= justInputted %></li>
+     takes input from app.post in the app.js file but shows only the latest entry-->
+        <% for ( var i=0; i<justInputted.length; i++ ) { %>
+            <div class="item">
+                <input type="checkbox">
+                <p><%= justInputted[i] %></p>
+            </div>
+
+            <% } %>
+                <form class="item" action="/" method="post">
+                    <input type="text" name="NewItem" placeholder="New Item" autocomplete="off">
+                    <button type="submit" name="button" > +</button>
+                </form>
+    </div>
+</body>
+<footer class="footer">
+    &#169; shaan akhtar khan
+</footer>
+</html>
